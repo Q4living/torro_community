@@ -83,7 +83,7 @@ CREATE TABLE `fieldTable` (
   `updated_time` datetime DEFAULT NULL COMMENT 'last_updated_time',
   PRIMARY KEY (`id`,`workspace_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
---insert into fieldTable values (1, 362, 0, 2, 'region_country', '', '', 0, '[]', 1, '', '2021-04-16 14:30:00', '2021-04-17 14:30:00');
+-- insert into fieldTable values (1, 362, 0, 2, 'region_country', '', '', 0, '[]', 1, '', '2021-04-16 14:30:00', '2021-04-17 14:30:00');
 DROP TABLE IF EXISTS `dynamicFieldTable`;
 CREATE TABLE `dynamicFieldTable` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT 'field_id',
@@ -95,7 +95,7 @@ CREATE TABLE `dynamicFieldTable` (
   `value_num` int DEFAULT NULL COMMENT 'how many value of this fields',
   `des` varchar(1024) DEFAULT NULL COMMENT 'description',
   `create_time` datetime DEFAULT NULL COMMENT 'create_time',
-  PRIMARY KEY (`id`,`workspace_id`) USING BTREE
+  PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 insert into dynamicFieldTable values (15, 0, 2, 2, 'Use case', '', '', 0, 'default usecase dynamic field', '2021-12-08 10:17:00');
 DROP TABLE IF EXISTS `dynamicFieldValueTable`;
